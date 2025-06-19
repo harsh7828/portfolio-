@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Learning Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(-45deg, #ff9a9e, #f33f75, #0660f2, #241df1);
+      background-size: 600% 600%;
+      animation: gradientBG 20s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    header {
+      text-align: center;
+      padding: 140px 20px 60px;
+      animation: fadeInDown 2s ease;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      animation: bounceIn 2s ease;
+      color: #ffe600;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 40px 30px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 500px;
+      backdrop-filter: blur(15px);
+      transition: all 0.3s ease;
+      animation: zoomIn 2s ease;
+      border: 2px solid #fff3;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #ffe600;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    button {
+      background: linear-gradient(45deg, #ffe600, #f80759);
+      border: none;
+      padding: 15px 35px;
+      border-radius: 40px;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #eee;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .troll-section {
+      margin-top: 60px;
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 0, 255, 0.2);
+      border-radius: 30px;
+      animation: rotateColors 10s linear infinite;
+    }
+
+    .troll-section h2 {
+      font-size: 2rem;
+      color: yellow;
+    }
+
+    @keyframes rotateColors {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .rickroll {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ffeb3b;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .rickroll:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#courses">Courses</a>
+    <a href="#progress">Progress</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#leave">Leave App</a>
+    <a href="#faculty">Faculty</a>
+  </nav>
+
+  <header>
+    <h1>📚 SYNAPSE LMS</h1>
+    <p>THE PLATEFORM WHERE ALL<B>NIGGAS</B> LEARN THAT HOW TO DESTROY THE STUDY</p>
+  </header>
+
+  <section id="courses">
+    <div class="card">
+      <h2>🎓 Courses</h2>
+      <p>Explore interactive video lessons, quizzes, and assignments tailored for you.</p>
+      <button>Browse Courses</button>
+    </div>
+  </section>
+
+  <section id="progress">
+    <div class="card">
+      <h2>📈 Student Progress</h2>
+      <p>Visualize performance, grades, and module completions with interactive charts.</p>
+      <button>View Dashboard</button>
+    </div>
+  </section>
+
+  <section id="attendance">
+    <div class="card">
+      <h2>🗓️ Attendance Tracker</h2>
+      <p>Check your attendance records and history by date, subject, or semester.</p>
+      <button>Check Attendance</button>
+    </div>
+  </section>
+
+  <section id="leave">
+    <div class="card">
+      <h2>📝 Leave Application</h2>
+      <p>Submit leave requests for review by faculty. Fast, easy, and trackable.</p>
+      <button>Apply Leave</button>
+    </div>
+  </section>
+
+  <section id="faculty">
+    <div class="card">
+      <h2>👩‍🏫 Faculty & Courses</h2>
+      <p>Dr. A. Sharma – Data Structures – 📞 +91-9876543210<br>Ms. K. Rao – DBMS – 📞 +91-9988776655<br>Mr. V. Iyer – Networks – 📞 +91-8877665544</p>
+      <button>View All Faculty</button>
+    </div>
+  </section>
+
+  <div class="troll-section">
+    <h2>🎵 <b>Bonus Learning Module</b></h2>
+    <p class="rickroll" onclick="window.open('https://www.youtube.com/watch?v=kXb8HMXlLiY', '_blank')"><b>🌟🌟Click here for secret knowledge...🌟🌟</b></p>
+  </div>
+
+  <footer>
+    &copy; 2025 BrightLearn LMS. Designed with ❤️ for students everywhere.
+  </footer>
+</body>
+</html>
+
